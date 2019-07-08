@@ -95,4 +95,6 @@ database.ref().on("child_added", function(childSnapshot) {
     );
 
     $("#trainTable > tbody").append(newRow);
+},  function(errorObject) {
+    console.log("The read failed: " + errorObject.code);
 });
