@@ -20,8 +20,9 @@ $("#addTrain").on("click", function(event) {
     var destination = $("#destination-input").val().trim();
     var first = moment($("#first-input").val().trim(), "HH:mm").format("X"); 
     var frequency = $("#rate-input").val().trim();
+    console.log(first);
 
-    if ((name != "") && (destination != "") && (first >= 0) && (first <= 1562562000) && (frequency > 0)) {
+    if ((name != "") && (destination != "") && (first != "Invalid date") && (frequency > 0)) {
         var newTrain = {
             name: name,
             destination: destination,
